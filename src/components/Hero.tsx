@@ -70,7 +70,7 @@ const Hero = ({ profileSrc }) => {
 </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#contact"
+                href="mailto:abhijeetjain231@gmail.com"
                 className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00E5C3] text-[#0F172A] font-bold rounded-lg overflow-hidden transition-all duration-300 hover:bg-[#14F1D9] animate-glow-pulse"
               >
                 <Mail className="w-5 h-5" />
