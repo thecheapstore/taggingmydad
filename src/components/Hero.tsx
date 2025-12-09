@@ -78,7 +78,7 @@ const Hero = ({ profileSrc }) => {
               </a>
 
               <a
-                href="#resume"
+                href="#experience"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-[#00E5C3] text-[#00E5C3] font-bold rounded-lg transition-all duration-300 hover:bg-[#00E5C3] hover:text-[#0F172A] hover:shadow-lg hover:shadow-[#00E5C3]/50"
               >
                 <Download className="w-5 h-5" />
