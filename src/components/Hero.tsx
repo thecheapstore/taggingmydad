@@ -3,7 +3,7 @@ import { Sparkles, Download, Mail } from 'lucide-react';
 const Hero = ({ profileSrc }) => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullText = "Abhijeet Jain - Full Stack Web Developer • GHL Developer • Automation Specialist";
+  const fullText = "Abhijeet Jain - Full Stack Web Developer • GHL Automation Specialist";
 
   useEffect(() => {
     let currentIndex = 0;
