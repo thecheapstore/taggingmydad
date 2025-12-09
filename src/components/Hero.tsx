@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Sparkles, Download, Mail } from 'lucide-react';
-
-const Hero = () => {
+const Hero = ({ profileSrc }) => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const fullText = "Abhijeet Jain — Web Designer • GHL Developer • Automation Specialist";
@@ -27,6 +26,8 @@ const Hero = () => {
     top: Math.random() * 100,
     delay: Math.random() * 6,
   }));
+
+  const imgSrc = profileSrc || /* profileImg || */ '/profile.jpg';
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -93,9 +94,28 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-[#00E5C3] to-[#0BD6B4] rounded-3xl blur-2xl opacity-30"></div>
               <div className="relative bg-gradient-to-br from-[#1E293B] to-[#0F172A] p-2 rounded-3xl">
                 <div className="w-72 h-72 md:w-96 md:h-96 bg-[#F8FAFC] rounded-2xl flex items-center justify-center overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-[#00E5C3] to-[#0BD6B4] flex items-center justify-center">
-                    <span className="text-[#0F172A] font-bold text-6xl">AJ</span>
-                  </div>
+                  {imgSrc ? (
+                    <img
+                      src={imgSrc}
+                      alt="Abhijeet Jain"
+                      loading="lazy"
+                      className="w-full h-full object-cover rounded-2xl"
+                      onError={(e) => {
+                        e.currentTarget.style.display = 'none';
+                        const parent = e.currentTarget.parentNode;
+                        if (parent) {
+                          const fallback = document.createElement('div');
+                          fallback.className = 'w-full h-full bg-gradient-to-br from-[#00E5C3] to-[#0BD6B4] flex items-center justify-center';
+                          fallback.innerHTML = '<span class="text-[#0F172A] font-bold text-6xl">AJ</span>';
+                          parent.appendChild(fallback);
+                        }
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-[#00E5C3] to-[#0BD6B4] flex items-center justify-center">
+                      <span className="text-[#0F172A] font-bold text-6xl">AJ</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
