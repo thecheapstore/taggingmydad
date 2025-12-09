@@ -3,7 +3,7 @@ import { Sparkles, Download, Mail } from 'lucide-react';
 const Hero = ({ profileSrc }) => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
-  const fullText = "Abhijeet Jain — Web Designer • GHL Developer • Automation Specialist";
+  const fullText = "Abhijeet Jain - Full Stack Web Developer • GHL Developer • Automation Specialist";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -62,14 +62,12 @@ const Hero = ({ profileSrc }) => {
               </span>
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-gradient mb-6">
-              Building Smarter Digital Systems with Code, CRM, and Automation
-            </h2>
-
+           <h2 className="text-2xl md:text-3xl font-semibold text-gradient mb-6">
+  Full Stack Web Developer, GHL Funnel and Workflow Specialist, Automation Engineer
+</h2>
             <p className="text-lg text-[#CBD5E1] mb-8 leading-relaxed">
-              I design clean, efficient digital experiences and build automation systems using GoHighLevel that remove manual work, improve conversions, and drive measurable business growth.
-            </p>
-
+  I develop scalable full-stack web solutions and design structured GoHighLevel funnels and automation workflows tailored for operational efficiency. With a strong foundation in web development and practical exposure to digital marketing systems, I help businesses streamline processes, reduce manual work, enhance user experience, improve conversions, and support measurable business growth.
+</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
