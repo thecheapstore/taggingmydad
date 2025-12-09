@@ -27,7 +27,7 @@ const Hero = ({ profileSrc }) => {
     delay: Math.random() * 6,
   }));
 
-  const imgSrc = profileSrc || /* profileImg || */ '/profile.jpg';
+  const imgSrc = profileSrc || /* profileImg || */ 'https://i.ibb.co/d4dPChNC/finalized.jpg';
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
